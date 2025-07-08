@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/your-username/playwright-java-test.git'
+            }
+        }
+
+        stage('Build & Test') {
+            steps {
+                sh './gradlew clean test'
+            }
+        }
+    }
+}

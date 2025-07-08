@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'com.microsoft.playwright:playwright:1.44.0'
+    testImplementation 'org.testng:testng:7.8.0'
+}
+
+test {
+    useTestNG()
+}
