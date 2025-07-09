@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build & Test') {
             steps {
-                bat '.\\gradlew clean test'
+                 bat 'gradlew clean test'
             }
         }
     }
