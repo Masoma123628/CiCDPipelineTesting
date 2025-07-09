@@ -7,10 +7,9 @@ pipeline {
                 git 'https://github.com/Masoma123628/jenkinsCiCD.git'
             }
         }
-
         stage('Build & Test') {
             steps {
-                sh './gradlew clean test'
+                bat '.\\gradlew clean test'
             }
         }
     }
