@@ -16,7 +16,9 @@ pipeline {
 
         stage('Build & Test') {
             steps {
-                bat 'gradlew.bat clean test'
+                dir('jenkinsCiCD') {
+                    bat 'gradlew.bat clean test'
+                }
             }
         }
     }
