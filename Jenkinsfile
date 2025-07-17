@@ -21,6 +21,31 @@ pipeline {
                 }
             }
         }
+        // stage('Build'){
+        //     steps{
+        //         bat 'echo "building the app"'
+        //     }
+        // }
+        // stage('Test'){
+        //     steps{
+        //         bat 'echo "Running tests"'
+        //     }
+        // }
+        // stage('Deploy'){
+        //     steps{
+        //         bat 'echo "deploying"'
+        //     }
+        // }
+        
     }
 }
+post{
+    success{
+        bat 'echo "build successful"'
+    }
+    failure{
+        bat 'echo "build failed"'
+    }
+}
+    
 
